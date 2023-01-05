@@ -1,0 +1,37 @@
+lockfileVersion: 5.4
+
+importers:
+
+  packages/compiler-core:
+    specifiers:
+      '@mini-vue-calliyi/shared': workspace:^1.0.0
+    dependencies:
+      '@mini-vue-calliyi/shared': link:../shared
+
+  packages/reactivity:
+    specifiers:
+      '@mini-vue-calliyi/shared': workspace:^1.0.0
+    dependencies:
+      '@mini-vue-calliyi/shared': link:../shared
+
+  packages/runtime-core:
+    specifiers:
+      '@mini-vue-calliyi/reactivity': workspace:^1.0.0
+      '@mini-vue-calliyi/shared': workspace:^1.0.0
+    dependencies:
+      '@mini-vue-calliyi/reactivity': link:../reactivity
+      '@mini-vue-calliyi/shared': link:../shared
+
+  packages/runtime-dom:
+    specifiers:
+      '@mini-vue-calliyi/runtime-core': workspace:^1.0.0
+    dependencies:
+      '@mini-vue-calliyi/runtime-core': link:../runtime-core
+
+  packages/vue:
+    specifiers:
+      '@mini-vue-calliyi/compiler-core': workspace:^1.0.0
+      '@mini-vue-calliyi/runtime-dom': workspace:^1.0.0
+    dependencies:
+      '@mini-vue-calliyi/compiler-core': link:../compiler-core
+      '@mini-vue-calliyi/runtime-dom': link:../runtime-dom
